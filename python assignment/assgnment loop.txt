@@ -1,0 +1,226 @@
+#Ques1: program to print all natural no from 1 to n using while loop
+
+a=1
+n=int(input("enter a natural no. :"))
+print("all natural no. from 1 to n are : ")
+while a<=n:
+    print(a)
+    a=a+1    
+
+#Ques2:print natural no. in reverse from n to 1 using while loop
+
+n=int(input("enter the no. :"))
+print("all natural no. in reverse order from n to 1 are : ")
+while n>=1:
+    print(n)
+    n=n-1    
+
+#Ques4: print even no. from 1 to 100 using while loop
+
+a=2
+print("all even no. from 1 to 100 are : ")
+while a<=100:
+    if a%2==0:
+        print(a)
+    a=a+1    
+
+#Ques5 print odd no. from 1 to 100 using while loop
+a=1
+print("all even no. from 1 to 100 are : ")
+while a<=100:
+    if a%2!=0:
+        print(a)
+    a=a+1    
+
+#Ques6 find sum o--f nat-ural no. from 1 to n
+
+a=1
+an=int(input("enter a no. : "))
+n=an
+print("sum of natural no. from 1 to n are: ")
+s= n*(a+an)//2
+print(s)
+
+#Ques7 calculate the sum of all even no. btwn 1 to n
+an=int(input("enter a no. : "))
+s=0
+print("sum of all even  no. from 1 to n are: ")
+for n in range(an):
+    if n%2==0:
+        s=s+n
+print(s)
+    
+
+#Ques8 calculate the sum of all odd no. btwn 1 to n
+
+an=int(input("enter a no. : "))
+s=0
+print("sum of all odd  no. from 1 to n are: ")
+for n in range(an):
+    if n%2!=0:
+        s=s+n
+print(s)
+    
+
+#Ques9 print multiplication table of any no.
+a=int(input("enter a no.: "))
+for i in range(1,11):
+    print("{} X {} = {}".format(a,i,a*i))
+    
+
+#Ques10 count no. of digit in a number
+
+a=input(" enter a no: " )
+count=0
+for i in a:
+    count+=1
+print(count)    
+
+
+#Ques11: finding first and last digit of a no.
+
+a=int(input("enter a no .: "))
+print("first and last digit of a no. are : " ,str(a)[0]+" "+str(a)[-1])
+
+
+#Ques12: finding sum of first and last digit of a no.
+
+a=int(input("enter a no : "))
+b=str(a)[0]
+c=str(a)[-1]
+d=int(b)+ int(c)
+print(d)
+
+
+#Ques13 find sum of the digit of a no.
+
+a= int(input("enter no.: "))
+copy=a
+counter=0
+while copy>0:
+    copy=copy//10
+    counter+=1
+
+s=0
+if counter<=a:
+        while (a > 0):
+            rem= a%10
+            s=rem+s
+            a=a//10
+
+        print("sum of digits = :" ,s)    
+
+
+#Ques13 find product of the digit of a no.
+
+a= int(input("enter no.: "))
+copy=a
+counter=0
+while copy>0:
+    copy=copy//10
+    counter+=1
+
+p=1
+if counter<=a:
+        while (a > 0):
+            rem= a%10
+            p=rem*p
+            a=a//10
+
+        print("product of digits of a given no. is = :" ,p)
+
+#QUES15 printing a given no. in reverse order
+
+a=int(input("enter a no."))
+b=str(a)
+print("reverse of a given no. is : " ,b[::-1])
+
+
+#ques16: check the given no. is palindrome or not
+
+a= int(input("enter no : "))
+b=str(a)
+if b== b[ ::-1]:
+    print("palindrome:")
+else:
+    print("not palindrome")
+
+#ques17 print all ASCII char with their values
+
+for i in range(1,256):
+	ch=chr(i)
+	print(i,ch)
+
+#ques18 wap to print following pattern
+
+a=1
+while a<=100:
+    if a%2!=0:
+        print(a, end="   ")
+    a=a+1    
+    
+#ques21: find power of a no. using while loop
+
+a=int(input("enter a no : "))
+e=int(input("enter the exponent : "))
+p=1
+for i in range(1,e+1):
+    p=p*a
+print("{} ^ {} = {} : ".format(a,e,p))    
+  
+
+#QUES22 find all factors of a no.
+
+a=int(input("enter a no. "))
+print("factors of a given no. are : ")
+for i in range(2,a-1):
+        if a%i==0:
+            print(i)
+            i+=1
+else:
+    print(a, "is a prime no ")
+
+
+#QUES23 calculate factorial of a no.
+a=int(input("enter a no. "))
+fact=1
+if a==0:
+    print("factorial of 0 is 1 ")
+else:
+    for i in range(1,a+1):
+        fact=fact*i
+    print("factorial of a given no. is : " ,fact) 
+
+
+#QUES24 program to check a no. is prime or not
+
+a=int(input("enter a no. "))
+if a>1:
+    for i in range(2,a//2):
+            if a%i==0:
+                print(a, " is not prime ")
+                break
+    else:
+        print(a, "is a prime no ")
+else:
+    print(a, "not a prime")
+
+
+#QUES25 program print prime no. btwn 1 to n
+
+a=int(input("enter a no. "))
+for i in range(2,a):
+                    if i>1:
+                        for j in range(2,i):
+                            if i%j==0:
+                                break
+                        else:
+                            print(i)
+    
+
+
+
+
+    
+
+

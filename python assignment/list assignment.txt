@@ -1,0 +1,70 @@
+#ques1: program to get the largest no. from the list
+
+a=[55,999,55,222,10,5]
+a.sort()
+print("largest no. from the given list is : " ,a[-1])
+
+#ques2: program to multiply all items in a list
+
+lst=[55,9,5,2,10,5]
+b=1
+print(" given list is : " ,lst)
+for i in lst:
+            b=b*i
+            i+=1
+print(" multiplication of elements of list is :" ,b)	
+
+
+#ques3: program to get the second largest no. from the list
+
+a=[55,999,55,222,10,5]
+a.sort()
+print("largest no. from the given list is : " ,a[-2])
+
+
+#que4: program to remove all duplicate elements from the list
+
+lst=[55,999,55,222,10,5,999,55]
+lst2=[]
+print(" given list is : " ,lst)
+for i in lst:
+    if i not in lst2:
+        lst2.append(i)
+print("after removing duplicate values from list : " ,lst2)
+
+
+#que5: program to count no. of string where string length is>=3 and 1st and last char are same from a given list
+
+lst=["hlo","lembo","lossl","hh","tunkit"]
+print("  given list is : " ,lst)
+count=0
+for i in lst:
+    if len(i)>2 and i[0]==i[-1]:
+        count+=1
+print(count)        
+    
+    
+#que6: program to find common elements from the list
+
+lst=[55,222,10,5,999]
+lst2=[1,2,55,6,88,10]
+print("  list1 is : " ,lst)
+print("  list2 is : " ,lst2)
+for i in lst:
+    for j in lst2:
+        if i==j:
+            print(i)
+            i+=1
+
+#que7: program to find the list in a list of lists whose sum of elements is the heighest
+
+lst=[[55,222],[10,5],[999,1,3]]
+
+print(max(lst,key=sum))
+
+
+
+   
+           
+
+

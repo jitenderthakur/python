@@ -1,0 +1,111 @@
+
+
+1. Write a python menu driven program which help to manage
+employees of the company.The program must have the
+following functionalities
+a. View all employees
+
+emp=open("c:/Python37/prog/files/emp.txt")
+for record in emp.readlines():
+    print(record)
+
+emp.close()
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+b. Search employees by
+i. Employee_id
+
+emp=open("c:/Python37/prog/files/emp.txt")
+eid=input("enter the eid to search")
+for record in emp.readlines():
+    emplist=record.split(',')
+    if eid==emplist[0]:
+        print(record)
+
+emp.close()
+////////////////////////////////////////////////////////////////////////////////////////////////
+ii. first_name
+
+emp=open("c:/Python37/prog/files/emp.txt")
+ename=input("enter the first_name to search")
+for record in emp.readlines():
+    emplist=record.split(',')
+    if ename==emplist[0]:
+        print(record,end=" ")
+
+emp.close()
+
+///////////////////////////////////////////////////////////////
+
+c. Insert a new employee
+
+emp=open("c:/Python37/prog/files/emp.txt","a+")
+eid=input("enter the eid")
+fname=input("enter the fname")
+lname=input("enter the lname")
+email=input("enter the email")
+res=[eid,fname,lname,email]
+rec=",".join(res)+",\n"
+emp.write(rec)
+emp.seek(0)
+print(emp.read())
+
+emp.close()
+
+/////////////////////////////////////////////////////////////////////
+
+d. Update information of an existing employee
+
+fp1=open("c:/Python37/prog/files/emp.txt","r")
+fp2=open("c:/Python37/prog/files/emp.txt","w")
+eid=input("Enter the id you want to update")
+for rec in fp1.readlines():
+    lst=rec.split(',')
+    if lst[0]==eid:
+        pass
+    else:
+        fname=input("enter the fname")
+        lname=input("enter the lname")
+        email=input("enter the email")
+        res=[eid,fname,lname,email]
+        rec=",".join(res)+",\n"
+        fp1.write(rec)
+
+fp1.close()
+fp2.close()
+
+fp1=open("c:/Python37/prog/files/emp.txt","w")
+fp2=open("c:/Python37/prog/files/emp.txt","r")
+
+for rec in fp2.readlines():
+    fp1.write(rec)
+
+fp1.close()
+fp2.close()
+
+//////////////////////////////////////////////////////////////////////////////////
+
+e. Delete a employee by employeeid.
+
+fp1=open("c:/Python37/prog/files/emp.txt","r")
+fp2=open("c:/Python37/prog/files/emp.txt","w")
+eid=input("Enter the id you wnat to remove")
+
+for rec in fp1.readlines():
+    lst=rec.split(',')
+    if lst[0]==eid:
+        pass
+    else:
+        fp2.write(rec)
+
+fp1.close()
+fp2.close()
+
+fp1=open("c:/Python37/prog/files/emp.txt","w")
+fp2=open("c:/Python37/prog/files/emp.txt","r")
+
+for rec in fp2.readlines():
+    fp1.write(rec)
+
+fp1.close()
+fp2.close()

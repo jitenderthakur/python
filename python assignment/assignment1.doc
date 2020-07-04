@@ -1,0 +1,89 @@
+# ques1 area of rectangle 
+
+length = int(input("enter length of rectangle : "))
+breadth = int(input("enter breadth of rectangle : "))
+area = length * breadth
+print("area of rectangle : ",area)
+
+# ques2: program to find diameter, circumference , area of circle 
+
+radius = int(input("enter the radius of circle : "))
+diameter = radius * 2
+circumference = 2 * 3.17 * radius
+area = 3.17 * radius * radius
+print("diameter of circle : ",diameter)
+print("circumference of circle : " ,circumference)
+print("area of circle : ", area)
+
+#ques3: conversion of centimeter into meter and kilometere 
+
+length = int(input(" length in centimeter : "))
+meter = length * 100
+kilometer = length * 100000
+print(" length in meter : ",meter)
+print(" length in kilometer : " , kilometer)
+
+#ques4 : convertion of temperature from fahrenheit to celsius 
+
+temp_f = int(input("enter temperature in fahrenheit : "))
+celsius = 5/9*(temp_f - 32)
+print("temp. in celsius : ", celsius)
+
+#ques5 : convert days into years,weeks and days
+
+a= int(input("enter no.of days: "))
+year= a//365
+week = (a%365)//7
+days= (a%365)%7
+print("years : ",year)
+print("weeks : ",week)
+print("days : ",days)
+
+# ques6 : square root of a number 
+
+a = float(input("enter a number : "))
+square_root =a** 0.5
+print(" square root of no. is : " ,square_root)
+
+# ques7: program to enter two angles of a triangle and find its third angle 
+
+a = int(input("enter 1st angle: "))
+b = int(input("enter 2nd angle: "))
+c = 180 - (a + b)
+print(" third angle of given triangle is : ", c)
+
+#ques8: program to find area of triangle 
+
+base = int(input("enter base of a triangle : " ))
+height = int(input("enter height of a triangle : "))
+area = (base * height)/2
+print("area of triangle is : " ,area)
+
+#ques 9: program to find total,average and percentage
+
+subj1 = int(input("enter marks: "))
+subj2 = int(input("enter marks: "))
+subj3 = int(input("enter marks: "))
+subj4 = int(input("enter marks: "))
+subj5 = int(input("enter marks: "))
+total= subj1+subj2+subj3+subj4+subj5
+avr= total/5
+per = (total/500)*100
+print("total marks : ", total)
+print("avrage marks : ", avr)
+print(" percentage: ", per)
+
+#ques 10: swaping using bitwise operator
+
+a = int(input("enter first number : "))
+b = int(input("enter second number : "))
+print(" first ans second numbers are : ",a,b)
+a= a^b
+b=  a^b
+a= a^b
+print(" after swapping two numbers are : ",a,b)
+
+
+
+
+

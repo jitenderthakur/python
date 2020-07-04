@@ -1,0 +1,63 @@
+#ques1: program to calculate the length of string
+
+a=str(input("enter string : " ))
+print("length of a string is : " ,len(a))
+
+
+#ques2:program to get first2 and last2 char of a string
+
+a=str(input("enter string : "))
+if len(a)>=4:
+    print(a[0:2]+a[-2:])
+else:
+    print("enter string greater than 3 digit")
+            
+
+#ques3: program in which occurance of first char will change to '$', except the 1st char itself
+
+a=str(input("enter the string : "))
+char=a[0]
+a =a.replace(char,'$')
+a=char+a[1:]
+print(a)
+
+
+#ques4: program to get single string from two string and swap 1st 2 char each
+
+a=str(input("enter the string1 : "))
+b=str(input("enter the string2 : "))
+c=b[:2] + a[2:]
+d=a[:2]+ b[2:]
+print(c+ " "+ d)
+
+
+#ques5: program to add 'ing' at the end of given string.if it already ends with 'ing' than add 'ly'to it
+
+a=str(input("enter the string : "))
+if len(a)>2:
+    if a[-3:]=='ing':
+        a +='ly'
+    else:
+        a+='ing'
+    print(a)    
+else:
+    print(a)
+
+
+#ques8: programto remove char which have odd index value
+
+a=str(input("enter the string : "))
+c= a[0::2]
+print(c)
+
+#ques: print string in upper and lower case
+
+a=str(input("enter the string : "))
+print(a.upper())
+print(a.lower())
+
+
+
+
+
+

@@ -1,0 +1,103 @@
+# Ques1 printing string in specific format
+
+print(''' Twinkle, twinkle,little star,
+             How i wonder what you are!
+		 up above the world so high,
+		 like a dimond in the sky.
+	  Twinkle, twinkle,little star,
+             How i wonder what you are!''')
+
+# QUES2 program that read astring from user and print it in double quotation
+
+a=str(input(" enter the string : "))
+print("\""+a+"\"")
+
+
+# Ques3 program to find area of circle 
+
+radius = int(input("enter the radius of circle : "))
+area = 3.17 * radius * radius
+print("area of circle : ", area)
+
+
+# Ques4 program to compute area of triangle by accepting base and height#
+
+base = int(input("enter base of a triangle : " ))
+height = int(input("enter height of a triangle : "))
+area = (base * height)/2
+print("area of triangle is : " ,area)
+
+
+# ques5 swaping 2 no. by with or without 3 variable
+
+a = int(input("enter first number : "))
+b = int(input("enter second number : "))
+print(" first ans second numbers are : ",a,b)
+a= a^b
+b=  a^b
+a= a^b
+print(" after swapping two numbers are : ",a,b)
+#with three variable
+c=a
+a=b
+b=c
+print("swaping using three variable : ",a,b)
+
+
+# ques6 program that read 3 digit no from user and add it
+
+a= int(input("enter no.: "))
+copy=a
+counter=0
+while copy>0:
+    copy=copy//10
+    counter+=1
+s=0
+if counter==3:
+        while (a > 0):
+            rem= a%10
+            s=rem+s
+            a=a//10
+
+        print("sum of digits = :" ,s)    
+print(" plzz type less then 3 digit no.")
+
+
+# ques7 find greatest no. among three
+
+a=int(input("enter 1st no.: "))
+b=int(input("enter 2nd no.: "))
+c=int(input("enter 3rd no.: "))
+if (a>b) and (a>c):
+    print("1st no. is greater: ",a)
+elif (b>a) and (b>c):
+    print("2nd no. is greater: ",b)
+elif (c>a) and (c>b):
+    print("3rd no. is greater: ",c)
+else:
+    print("are equal")
+
+
+# ques8 program to display message according to the marks
+
+subj1 = int(input("enter marks obtained out of 100: "))
+subj2 = int(input("enter marks obtained out of 100: "))
+subj3 = int(input("enter marks obtained out of 100: "))
+subj4 = int(input("enter marks obtained out of 100: "))
+subj5 = int(input("enter marks obtained out of 100: "))
+total= subj1+subj2+subj3+subj4+subj5
+if total>=400:
+    print("exelent work")
+elif (total>=300) and (total<400):
+    print("nice work")
+elif (total>=200) and (total<300):
+    print("average work")
+
+else:
+    print("do hard work")
+
+
+
+
+
+      
